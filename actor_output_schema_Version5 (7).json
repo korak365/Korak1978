@@ -1,0 +1,18 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Directory Listings Extracted Data",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "columns": {
+            "type": "array",
+            "description": "Columns in the output dataset",
+            "items": {
+                "type": "string",
+                "enum": ["name", "location", "phone", "email", "website"]
+            }
+        }
+    }
+}

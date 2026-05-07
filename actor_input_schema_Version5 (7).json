@@ -1,0 +1,53 @@
+{
+    "title": "Input schema for NicheDirectoryScraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "URLs of the directories to scrape (e.g., 'https://example.com/directory').",
+            "editor": "requestListSources",
+            "prefill": [
+                { "url": "https://example.com/top-dentists-london" },
+                { "url": "https://example.com/top-lawyers-nyc" }
+            ]
+        },
+        "nameSelector": {
+            "title": "Name Field Selector",
+            "type": "string",
+            "description": "CSS selector for extracting the name.",
+            "default": ".name, .listing-title, .business-name"
+        },
+        "locationSelector": {
+            "title": "Location Field Selector",
+            "type": "string",
+            "description": "CSS selector for extracting the location or address.",
+            "default": ".location, .address"
+        },
+        "phoneSelector": {
+            "title": "Phone Field Selector",
+            "type": "string",
+            "description": "CSS selector for extracting the phone number.",
+            "default": ".phone, .contact-number"
+        },
+        "emailSelector": {
+            "title": "Email Field Selector",
+            "type": "string",
+            "description": "CSS selector for extracting the email address.",
+            "default": ".email, .contact-email"
+        },
+        "websiteSelector": {
+            "title": "Website Field Selector",
+            "type": "string",
+            "description": "CSS selector for extracting the website URL.",
+            "default": ".website, .link"
+        },
+        "paginationSelector": {
+            "title": "Pagination Selector",
+            "type": "string",
+            "description": "CSS selector for identifying the 'Next' page link.",
+            "default": ".pagination-next"
+        }
+    }
+}

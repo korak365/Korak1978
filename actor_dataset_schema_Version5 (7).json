@@ -1,0 +1,22 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "Extracted Listings",
+            "transformation": {
+                "fields": ["name", "location", "phone", "email", "website"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "name": { "label": "Name", "format": "text" },
+                    "location": { "label": "Location", "format": "text" },
+                    "phone": { "label": "Phone", "format": "text" },
+                    "email": { "label": "Email", "format": "link" },
+                    "website": { "label": "Website", "format": "link" }
+                }
+            }
+        }
+    }
+}
